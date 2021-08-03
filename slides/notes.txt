@@ -1,0 +1,3 @@
+Packages can be imported
+IDEA will prompt with Alt+Enter for importing packages
+Format strings using place holders
