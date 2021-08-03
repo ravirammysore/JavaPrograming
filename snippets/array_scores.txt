@@ -1,0 +1,16 @@
+int[] scores = {65, 100, 90, 75, 55};
+int count = 0;
+boolean hasScoredFull = false;
+
+for(int score : scores) {
+    System.out.println(score);
+
+    if(score>=70)
+        count++;
+
+    if(score==100)
+        hasScoredFull = true;
+}
+
+System.out.println("No of subjects he scored 70 or more:" + count);
+System.out.println("Has he scored full in any subject:" + hasScoredFull);

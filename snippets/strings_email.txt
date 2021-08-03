@@ -1,0 +1,15 @@
+--------Part A-------
+
+String emailId = "sam@gmail.com";
+int position = emailId.indexOf("@");
+String email = emailId.substring(0, position);
+System.out.println("Welcome to site" + " Mr." + email + "!");
+
+--------Part B-------
+
+String emailId = "sam@gmail.com";
+int position = emailId.indexOf("@");
+String email = emailId.substring(0, position);
+String today = Calendar.getInstance().getTime().toString();
+String msg = MessageFormat.format("Welcome to our site Mr.{0}! Today is {1}",email,today);
+System.out.println(msg);
