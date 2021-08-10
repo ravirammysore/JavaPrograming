@@ -1,0 +1,92 @@
+//Take 1
+
+package com.first;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        boolean areEntriesValid;
+        String userName, password;
+
+        System.out.println(".........................................");
+
+        System.out.print("Enter user Name:");
+        userName = keyboard.nextLine();
+        System.out.print("Enter password:");
+        password = keyboard.nextLine();
+        areEntriesValid = validateEntries(userName,password);
+
+        if(areEntriesValid){
+            if(userName.equals("sam") && password.equals("1234"))
+                System.out.println("Login success");
+            else
+                System.out.println("Login failed");
+        }
+        else{
+            System.out.println("Invalid inputs, please try again!");
+        }
+
+        System.out.println(".........................................");
+    }
+
+    static boolean validateEntries(String userName, String password) {
+        boolean isEntryValid = true;
+
+        if(userName.isEmpty() || password.isEmpty())
+            isEntryValid = false;
+
+        return isEntryValid;
+    }
+}
+
+
+// Take 2
+
+package com.first;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        boolean areEntriesValid;
+        String userName, password;
+
+        printSeparator();
+
+        do {
+            System.out.print("Enter user Name:");
+            userName = keyboard.nextLine();
+
+            System.out.print("Enter password:");
+            password = keyboard.nextLine();
+
+            areEntriesValid = validateEntries(userName,password);
+
+        } while (!areEntriesValid);
+
+        if(userName.equals("sam") && password.equals("1234"))
+            System.out.println("Login success");
+        else
+            System.out.println("Login failed");
+
+        printSeparator();
+    }
+
+    static void printSeparator(){
+        System.out.println(".........................................");
+    }
+
+    static boolean validateEntries(String userName, String password) {
+        boolean isEntryValid = true;
+
+        if(userName.isEmpty() || password.isEmpty())
+            isEntryValid = false;
+
+        return isEntryValid;
+    }
+}

@@ -1,4 +1,0 @@
-char literal
-charAt() method
-Idea prompts us with method details
-'break' keyword

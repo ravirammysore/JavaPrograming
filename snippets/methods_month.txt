@@ -1,11 +1,4 @@
-package com.first;
-
-import java.text.MessageFormat;
-import java.util.Scanner;
-
-public class Main {
-
-    public static void main(String[] args) {
+  public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
         System.out.print("Enter month:");
@@ -45,4 +38,3 @@ public class Main {
         String msg = MessageFormat.format("{0} is {1}",month,monthString);
         System.out.println(msg);
     }
-}
